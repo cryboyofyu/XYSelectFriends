@@ -1,0 +1,8 @@
+platform:ios, '7.0'
+
+target 'XYSelectFriendsExample' do
+
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+
+end
