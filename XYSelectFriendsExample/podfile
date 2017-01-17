@@ -2,7 +2,7 @@ platform:ios, '7.0'
 
 target 'XYSelectFriendsExample' do
 
-pod 'SDWebImage'
+pod 'SDWebImage', '3.8.0'
 pod 'MBProgressHUD'
 
 end

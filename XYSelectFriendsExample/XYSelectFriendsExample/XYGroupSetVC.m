@@ -342,6 +342,8 @@
             userItem.itemUserId = [NSString stringWithFormat:@"%d",i];
             userItem.itemUserName = [NSString stringWithFormat:@"欣宇%d",i];
             userItem.itemUserHead = @"http://f.hiphotos.baidu.com/image/pic/item/bba1cd11728b47101489df48c0cec3fdfd03238b.jpg";
+            
+
             [_xyMembersMArr addObject:userItem];
             
         }
