@@ -1,17 +1,31 @@
 PODS:
   - MBProgressHUD (1.0.0)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SDWebImage (4.0.0-beta2):
+    - SDWebImage/Core (= 4.0.0-beta2)
+  - SDWebImage/Core (4.0.0-beta2)
 
 DEPENDENCIES:
-  - MBProgressHUD
-  - SDWebImage
+  - MBProgressHUD (from `https://github.com/jdg/MBProgressHUD.git`)
+  - SDWebImage (from `https://github.com/rs/SDWebImage.git`)
+
+EXTERNAL SOURCES:
+  MBProgressHUD:
+    :git: https://github.com/jdg/MBProgressHUD.git
+  SDWebImage:
+    :git: https://github.com/rs/SDWebImage.git
+
+CHECKOUT OPTIONS:
+  MBProgressHUD:
+    :commit: aec802ba2c2f524f8a47708aa6f714a48be73f49
+    :git: https://github.com/jdg/MBProgressHUD.git
+  SDWebImage:
+    :commit: 5ea33a709579a28437176faf3b62e91d7532ebbc
+    :git: https://github.com/rs/SDWebImage.git
 
 SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
 
-PODFILE CHECKSUM: b36c32deac7a7c95e62211b49a9ce71a961fbd11
+PODFILE CHECKSUM: f3a75695379d39ccd2b70aaa7259155bb8ff2a32
 
 COCOAPODS: 1.2.0.beta.1
