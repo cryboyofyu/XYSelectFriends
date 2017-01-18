@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XYSelectFriends"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "高仿微信群组添加/删除好友/群组设置页面(集成简单)"
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/cryboyofyu/XYSelectFriends.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/cryboyofyu/XYSelectFriends.git", :tag => "0.0.3" }
 
   s.source_files  = "XYSelectFriends/*.{h,m}"
   s.resources = 'XYSelectFriends/XYImgs/*.{jpg,png}'
