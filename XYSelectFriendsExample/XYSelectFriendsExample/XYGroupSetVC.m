@@ -13,7 +13,7 @@
 #import "XYGroupCollectionCell.h"
 #import "XYHUD.h"
 #import "XYSelectFriendsVC.h"
-#import "AppDelegate.h"
+#import "XYConversationManager.h"
 @interface XYGroupSetVC ()<XYGroupItemDelegate,XYGroupSetTVCDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     UIView * _xyBgView;
@@ -23,7 +23,6 @@
     UIButton * _xyDeleteBtn;//删除并退出
     UIButton * _xyDissolveBtn;//解散并删除
     UIAlertController * _xyAlertController;
-    AppDelegate * _xyAppDelegate;
     
 }
 @end
@@ -63,7 +62,6 @@
     _xy_GroupItem.itemGroupNum =  @"50";
     _xy_GroupItem.itemGroupPortrait = [UIImage imageNamed:@"girl0.jpg"];
     _xyMembersMArr = [[NSMutableArray alloc]init];
-    _xyAppDelegate= (AppDelegate *)[UIApplication sharedApplication].delegate;
 
 }
 
@@ -111,22 +109,22 @@
     
     NSInteger  count = 0;
     if(self.xy_IsGroupOwner == YES){
-        if((_xyAppDelegate.xyGroupMembersMArr.count+2) %4==0){
-            count = (_xyAppDelegate.xyGroupMembersMArr.count + 2)/4;
+        if(([XYConversationManager xy_shareManger].xyGroupMembersMArr.count+2) %4==0){
+            count = ([XYConversationManager xy_shareManger].xyGroupMembersMArr.count + 2)/4;
         }else{
-            count = (_xyAppDelegate.xyGroupMembersMArr.count + 2)/4 + 1;
+            count = ([XYConversationManager xy_shareManger].xyGroupMembersMArr.count + 2)/4 + 1;
             
         }
     }else{
-        if((_xyAppDelegate.xyGroupMembersMArr.count) %4==0){
-            count = (_xyAppDelegate.xyGroupMembersMArr.count )/4;
+        if(([XYConversationManager xy_shareManger].xyGroupMembersMArr.count) %4==0){
+            count = ([XYConversationManager xy_shareManger].xyGroupMembersMArr.count )/4;
         }else{
-            count = (_xyAppDelegate.xyGroupMembersMArr.count )/4 + 1;
+            count = ([XYConversationManager xy_shareManger].xyGroupMembersMArr.count )/4 + 1;
             
         }
     }
     [_xyMembersMArr removeAllObjects];
-    [_xyMembersMArr addObjectsFromArray:_xyAppDelegate.xyGroupMembersMArr];
+    [_xyMembersMArr addObjectsFromArray:[XYConversationManager xy_shareManger].xyGroupMembersMArr];
     _xyGroupMembersShow.collectionView.frame = CGRectMake(_xyGroupMembersShow.collectionView.frame.origin.x,xyPadding *2, _xyGroupMembersShow.collectionView.frame.size.width, count * (xyCollectionCellH + xyPadding ) + xyPadding *4);
     
     UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, xy_width, _xyGroupMembersShow.collectionView.frame.size.height + xyPadding*4)];
@@ -333,8 +331,8 @@
 
     
     _xyGroupSetTVC.xy_groupItem = _xy_GroupItem;
-    if(_xyAppDelegate.xyGroupMembersMArr.count>0){
-        _xyGroupMembersShow.xy_membersMArr = [NSMutableArray arrayWithArray:_xyAppDelegate.xyGroupMembersMArr];
+    if([XYConversationManager xy_shareManger].xyGroupMembersMArr.count>0){
+        _xyGroupMembersShow.xy_membersMArr = [NSMutableArray arrayWithArray:[XYConversationManager xy_shareManger].xyGroupMembersMArr];
 
     }else{
         for(int i=0;i<10;i++){
@@ -347,7 +345,7 @@
             [_xyMembersMArr addObject:userItem];
             
         }
-        _xyAppDelegate.xyGroupMembersMArr = [NSMutableArray arrayWithArray:_xyMembersMArr];
+        [XYConversationManager xy_shareManger].xyGroupMembersMArr = [NSMutableArray arrayWithArray:_xyMembersMArr];
         _xyGroupMembersShow.xy_membersMArr = [NSMutableArray arrayWithArray:_xyMembersMArr];
 
     }

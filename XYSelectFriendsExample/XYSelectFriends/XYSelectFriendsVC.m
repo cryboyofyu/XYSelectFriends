@@ -11,7 +11,7 @@
 #import "XYSelectedFriendsHeaderSV.h"
 #import "XYUserItem.h"
 #import "XYHUD.h"
-#import "AppDelegate.h"
+#import "XYConversationManager.h"
 @interface XYSelectFriendsVC ()
 {
     UIView * _bgView;
@@ -22,7 +22,6 @@
     NSString * _membersIdStr;
     char  _letter;
     int _xy;
-    AppDelegate * _xyAppDelegate;
 
 }
 @end
@@ -34,7 +33,6 @@
     if(self){
         _letter = 'A';
         _xy = 0;
-        _xyAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     }
     return self;
 }
@@ -114,12 +112,12 @@
                 }else if(self.xyType == XYSelectContactAdd){
                     if(_xyGroupId.length >0){
                         NSLog(@"所选联系人加入成功!");
-                        [_xyAppDelegate.xyGroupMembersMArr addObjectsFromArray:_xySelectFriendsTVC.xySeletedMArr];
+                        [[XYConversationManager xy_shareManger].xyGroupMembersMArr addObjectsFromArray:_xySelectFriendsTVC.xySeletedMArr];
                         [XYHUD showCustomHUDWithBgView:[UIApplication sharedApplication].keyWindow withTitle:@"所选联系人加入成功!"];
                     }
                 }else if(self.xyType == XYSelectContactDelete){
                     NSLog(@"所选联系人删除成功!");
-                    [_xyAppDelegate.xyGroupMembersMArr removeObjectsInArray:_xySelectFriendsTVC.xySeletedMArr];
+                    [[XYConversationManager xy_shareManger].xyGroupMembersMArr removeObjectsInArray:_xySelectFriendsTVC.xySeletedMArr];
                     [XYHUD showCustomHUDWithBgView:[UIApplication sharedApplication].keyWindow withTitle:@"所选联系人删除成功!"];
 
                 }

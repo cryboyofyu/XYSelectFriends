@@ -15,7 +15,8 @@ Pod::Spec.new do |s|
 
   s.author             = { "LV" => "cryboyofyu@gmail.com" }
 
-  # s.platform     = :ios, "7.0"
+  s.platform     = :ios, "7.0"
+
   s.source       = { :git => "https://github.com/cryboyofyu/XYSelectFriends.git", :tag => "0.0.2" }
 
   s.source_files  = "XYSelectFriends/*.{h,m}"
