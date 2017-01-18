@@ -2,7 +2,7 @@ platform:ios, '7.0'
 
 target 'XYSelectFriendsExample' do
 
-pod 'SDWebImage', :git =>'https://github.com/rs/SDWebImage.git'
-pod 'MBProgressHUD', :git =>'https://github.com/jdg/MBProgressHUD.git'
+pod 'SDWebImage'
+pod 'MBProgressHUD'
 
 end
