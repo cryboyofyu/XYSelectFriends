@@ -45,7 +45,7 @@
 
 - (void)setXy_userItem:(XYUserItem *)xy_userItem{
     _xy_userItem = xy_userItem;
-    
+    xy_userItem.itemIsSelected = NO;
     [self.xy_portraitImgView sd_setImageWithURL:[NSURL URLWithString:xy_userItem.itemUserHead] placeholderImage:[UIImage imageNamed:xyCellPortraitPlaceholder]];
     self.xy_nameLabel.text = xy_userItem.itemUserName;}
 

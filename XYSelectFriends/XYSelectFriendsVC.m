@@ -167,6 +167,9 @@
 - (void)xyMakeGroupMembers{
     
     NSDictionary * dic = @{@"L":self.xyGroupMembersMArr};
+
+    
+   
     _xySelectFriendsTVC.xyDataMArr = [NSMutableArray arrayWithArray:@[dic]];
 
 }
