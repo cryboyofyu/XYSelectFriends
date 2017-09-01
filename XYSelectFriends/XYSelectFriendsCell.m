@@ -41,6 +41,7 @@
     self.xyPortraitImgView = [[UIImageView alloc]initWithFrame:CGRectMake(xyPadding + CGRectGetMaxX(self.xyCheckImgView.frame), (CGRectGetHeight(self.xyCellBgImgView.frame) - xyChatFriendListPortraitH)/2, xyChatFriendListPortraitH, xyChatFriendListPortraitH)];
     
     [self.xyCellBgImgView addSubview:self.xyPortraitImgView];
+    self.xyPortraitImgView.contentMode = UIViewContentModeScaleAspectFill;
     self.xyPortraitImgView.layer.cornerRadius = xyChatFriendListPortraitH/2;
     self.xyPortraitImgView.layer.masksToBounds = YES;
     

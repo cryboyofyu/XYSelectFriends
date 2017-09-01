@@ -26,7 +26,8 @@
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:xyGroupSetVC];
     self.window.rootViewController = nav;
     
-    return YES;}
+    return YES;
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -329,7 +329,6 @@
 #pragma mark-lv -------------------请求位置-----------------------------------------
 - (void)xyRequestGetGroupMembersInfo{
 
-    
     _xyGroupSetTVC.xy_groupItem = _xy_GroupItem;
     if([XYConversationManager xy_shareManger].xyGroupMembersMArr.count>0){
         _xyGroupMembersShow.xy_membersMArr = [NSMutableArray arrayWithArray:[XYConversationManager xy_shareManger].xyGroupMembersMArr];

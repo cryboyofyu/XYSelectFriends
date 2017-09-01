@@ -361,6 +361,7 @@
 				TargetAttributes = {
 					1476CB411E276E2C00282B82 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = D8DHT5XN32;
 						ProvisioningStyle = Automatic;
 					};
 					1476CB5A1E276E2C00282B82 = {
@@ -647,6 +648,7 @@
 			baseConfigurationReference = 30EF5847015E2471DD32907C /* Pods-XYSelectFriendsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D8DHT5XN32;
 				INFOPLIST_FILE = XYSelectFriendsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XY.XYSelectFriendsExample;
@@ -659,6 +661,7 @@
 			baseConfigurationReference = 062149CE9D181C6C559E92D1 /* Pods-XYSelectFriendsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D8DHT5XN32;
 				INFOPLIST_FILE = XYSelectFriendsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XY.XYSelectFriendsExample;
